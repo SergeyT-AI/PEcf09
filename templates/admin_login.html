@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход в гримёрку</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700&family=Manrope:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="{{ url_for('index') }}">Промпт-инженер для бизнеса</a>
+      <nav><a href="{{ url_for('index') }}">На сайт</a></nav>
+    </div>
+  </header>
+  <div class="form-card login-card">
+    <h2>Гримёрка</h2>
+    <p class="hint" style="margin-bottom:18px">Учебная админка заявок. Логин и пароль — в README.</p>
+    {% with messages = get_flashed_messages() %}
+      {% for message in messages %}<p class="field-error">{{ message }}</p>{% endfor %}
+    {% endwith %}
+    <form method="post">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.username.label }}
+        {{ form.username() }}
+      </div>
+      <div>
+        {{ form.password.label }}
+        {{ form.password() }}
+      </div>
+      <button type="submit">Войти</button>
+    </form>
+  </div>
+</body>
+</html>

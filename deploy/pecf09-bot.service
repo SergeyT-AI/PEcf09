@@ -1,0 +1,16 @@
+[Unit]
+Description=PEcf09 Telegram RAG bot
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/pecf09/assistant
+EnvironmentFile=/opt/pecf09/.env
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONUTF8=1
+ExecStart=/opt/pecf09/venv/bin/python -u run_telegram.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

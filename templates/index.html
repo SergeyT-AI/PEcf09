@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Промпт-инженер для бизнеса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="none" stroke="#c9a227" stroke-width="2"/>
+          <path d="M18 40c4-10 10-16 14-16s10 6 14 16" fill="none" stroke="#efe4d2" stroke-width="2"/>
+          <circle cx="24" cy="28" r="3" fill="#c1121f"/>
+          <circle cx="40" cy="28" r="3" fill="#c9a227"/>
+          <path d="M20 16l12 8 12-8-4 14H24z" fill="#c1121f"/>
+        </svg>
+        Промпт-инженер для бизнеса
+      </a>
+      <nav>
+        <a href="#top">Главная</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="hero" id="top">
+      <div>
+        <p class="tagline">От простой реплики в чате до порядка во всем действии</p>
+        <h1>Рутина уходит за кулисы — <em>на&nbsp;сцене</em> остаётся суть</h1>
+        <p class="lead">Собираю помощника, который закрывает типовые вопросы по заявкам, оплате и статусам. Команда занимается делом, а не копированием одних и тех же реплик.</p>
+        <div class="hero-actions">
+          <a class="btn btn-blood" href="#contact">Обсудить задачу</a>
+          <a class="btn btn-ghost" href="#cases">Смотреть акты</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <a href="#act-1">Telegram-ассистент с базой знаний</a><b>◆</b>
+      <a href="#act-2">Заявки больше не теряются</a><b>◆</b>
+      <a href="#act-3">Понятный следующий шаг</a><b>◆</b>
+      <a href="#act-4">Порядок в сделках</a><b>◆</b>
+      <a href="#act-5">Первая линия без антракта</a><b>◆</b>
+      <a href="#act-1">Telegram-ассистент с базой знаний</a><b>◆</b>
+      <a href="#act-2">Заявки больше не теряются</a><b>◆</b>
+      <a href="#act-3">Понятный следующий шаг</a><b>◆</b>
+      <a href="#act-4">Порядок в сделках</a><b>◆</b>
+      <a href="#act-5">Первая линия без антракта</a><b>◆</b>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="acts" id="cases">
+      <div class="section-head reveal">
+        <h2>Наши акты</h2>
+        <p class="section-kicker">Пять условных постановок. Сначала шум в переписке, потом порядок за кулисами.</p>
+      </div>
+      <div class="cases">
+        <article class="case reveal" id="act-1">
+          <div class="case-head">
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 34V14a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H18l-10 8v-8z"/></svg>
+            <div class="num">Акт первый</div>
+          </div>
+          <h3>Telegram-ассистент с базой знаний</h3>
+          <div class="case-gains">
+            <h4>Что получает бизнес</h4>
+            <ul>
+              <li>Первая линия освобождает примерно <strong>15 часов в неделю</strong> — люди занимаются сделками, а не копированием ответов</li>
+              <li>Клиент <strong>не ждёт и не пишет повторно</strong>: типовое закрывается сразу, в том числе вечером и в выходные</li>
+              <li><strong>Меньше сорванных оплат</strong>: после заявки человек знает, что делать дальше</li>
+              <li>Руководитель <strong>видит повторяющиеся вопросы</strong> и дыры в инструкциях, а не гадает по переписке</li>
+              <li>В записях <strong>нет ФИО и телефонов</strong> — только суть обращения</li>
+            </ul>
+          </div>
+          <div class="case-extra">
+            <div class="case-extra-inner">
+              <h4>Как это выглядит</h4>
+              <ul>
+                <li>Клиент открывает Telegram и пишет вопрос своими словами</li>
+                <li>Бот ищет ответ в базе компании и отвечает без очереди</li>
+                <li>Если вопрос уже был — отвечает ещё быстрее, не дергая команду</li>
+                <li>Нестандартный случай не «зависает»: его передают человеку</li>
+                <li>Все обращения сохраняются, чтобы видеть, о чём чаще спрашивают</li>
+              </ul>
+              <p class="finale">Финал: нагрузка на команду падает, клиент не сидит в темноте зала. Написать боту: <a class="bot-link" href="{{ bot_url }}" target="_blank" rel="noopener">{{ bot_url }}</a></p>
+            </div>
+          </div>
+          <button class="more" type="button" aria-expanded="false">Подробнее →</button>
+        </article>
+        <article class="case reveal" id="act-2">
+          <div class="case-head">
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="12" width="32" height="24" rx="3"/><path d="M8 18h32M18 12v-4h12v4"/></svg>
+            <div class="num">Акт второй</div>
+          </div>
+          <h3>Заявки больше не теряются</h3>
+          <p>Каждое обращение сразу в общем списке: имя, задача, вопрос.</p>
+          <div class="case-extra">
+            <div class="case-extra-inner">
+              <p>Обращения приходили в мессенджер и тонули в ленте. Часть сделок так и не доходила до оплаты.</p>
+              <h4>Что выходит на сцену</h4>
+              <ul>
+                <li>Каждая заявка сразу в общем списке</li>
+                <li>Имя, задача и вопрос не разъезжаются по чатам</li>
+                <li>Команда отвечает по очереди, а не «кто громче написал»</li>
+                <li>Меньше ручной сортировки переписки</li>
+              </ul>
+              <p class="finale">Финал: меньше потерянных обращений. Зал не пустеет из-за забытой реплики.</p>
+            </div>
+          </div>
+          <button class="more" type="button" aria-expanded="false">Подробнее →</button>
+        </article>
+        <article class="case reveal" id="act-3">
+          <div class="case-head">
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="36" r="4"/><circle cx="36" cy="12" r="4"/><path d="M16 32l16-16"/><path d="M28 12h8v8"/></svg>
+            <div class="num">Акт третий</div>
+          </div>
+          <h3>Понятный следующий шаг</h3>
+          <p>После оплаты или сделки клиент знает, что делать дальше.</p>
+          <div class="case-extra">
+            <div class="case-extra-inner">
+              <p>После оплаты или сделки клиенты писали: «что дальше», «где доступ».</p>
+              <h4>Что выходит на сцену</h4>
+              <ul>
+                <li>Сразу после шага — короткая инструкция</li>
+                <li>Клиент знает, куда войти и что делать</li>
+                <li>Повторяющиеся сообщения почти исчезают</li>
+                <li>Человек подключается только к сбою, а не к каждому «где ссылка»</li>
+              </ul>
+              <p class="finale">Финал: следующий акт начинается без паузы и без ночных разборов.</p>
+            </div>
+          </div>
+          <button class="more" type="button" aria-expanded="false">Подробнее →</button>
+        </article>
+        <article class="case reveal" id="act-4">
+          <div class="case-head">
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="24" cy="24" r="8"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4M12 12l3 3M33 33l3 3M36 12l-3 3M15 33l-3 3"/></svg>
+            <div class="num">Акт четвёртый</div>
+          </div>
+          <h3>Порядок в сделках</h3>
+          <p>Контакты и статусы в одном месте, без хаоса в чатах и таблицах.</p>
+          <div class="case-extra">
+            <div class="case-extra-inner">
+              <p>Статусы жили в таблицах, чатах и головах разных людей. Сделка легко сходила со сцены.</p>
+              <h4>Что выходит на сцену</h4>
+              <ul>
+                <li>Контакт, этап и следующий шаг в одном месте</li>
+                <li>Команда видит очередь, а не обрывки переписки</li>
+                <li>Меньше «я думал, это у тебя»</li>
+                <li>Рутина учёта уходит за кулисы</li>
+              </ul>
+              <p class="finale">Финал: сцена для сделок становится общей, без хаоса за занавесом.</p>
+            </div>
+          </div>
+          <button class="more" type="button" aria-expanded="false">Подробнее →</button>
+        </article>
+        <article class="case reveal" id="act-5">
+          <div class="case-head">
+            <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="24" cy="18" r="8"/><path d="M10 38c3-8 9-12 14-12s11 4 14 12"/><path d="M32 14c2 0 5 2 6 6"/></svg>
+            <div class="num">Акт пятый</div>
+          </div>
+          <h3>Первая линия без антракта</h3>
+          <p>Типовое закрывается сразу. Сложное уходит человеку, не теряясь в ленте.</p>
+          <div class="case-extra">
+            <div class="case-extra-inner">
+              <p>Первая линия тонула в типовом. Сложное ждало вместе с простым.</p>
+              <h4>Что выходит на сцену</h4>
+              <ul>
+                <li>Типовое закрывается сразу</li>
+                <li>Сложное уходит человеку с контекстом</li>
+                <li>Клиент не сидит в очереди на очевидное</li>
+                <li>Команда занимается исключениями, а не рефреном</li>
+              </ul>
+              <p class="finale">Финал: зал не ждёт антракта. Человек выходит только на свою партию.</p>
+            </div>
+          </div>
+          <button class="more" type="button" aria-expanded="false">Подробнее →</button>
+        </article>
+      </div>
+      <div class="cases-cta">
+        <a class="btn btn-blood" href="#contact">Обсудить постановку →</a>
+      </div>
+    </section>
+
+    <section class="split reveal">
+      <p class="quote">На сцене тишина только тогда, когда <span>ответ уже дан</span>.</p>
+      <div class="stats">
+        <div class="stat"><b>до 15 ч</b><span>возвращаются команде каждую неделю</span></div>
+        <div class="stat"><b>без очередей</b><span>клиент не ждёт и не пишет повторно</span></div>
+        <div class="stat"><b>1 список</b><span>заявки больше не тонут в переписке</span></div>
+        <div class="stat"><b>сразу</b><span>ясный следующий шаг, без ночных «что дальше»</span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="reveal">Напишите о задаче</h2>
+      <p class="reveal">Заполните форму, и я отвечу в рабочие дни, часовой пояс Москва.</p>
+      <div class="form-card reveal">
+        <form id="contact-form" method="post" action="{{ url_for('index') }}#contact" novalidate>
+          {{ form.hidden_tag() }}
+          <div>
+            {{ form.name.label }}
+            {{ form.name(class_='is-invalid' if form.name.errors else '') }}
+            {% for error in form.name.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+          </div>
+          <div>
+            {{ form.email.label }}
+            {{ form.email(class_='is-invalid' if form.email.errors else '') }}
+            {% for error in form.email.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+          </div>
+          <div>
+            {{ form.phone.label }}
+            {{ form.phone(placeholder='+7 (999) 000-00-00') }}
+            {% for error in form.phone.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+          </div>
+          <div>
+            {{ form.topic.label }}
+            {{ form.topic(class_='is-invalid' if form.topic.errors else '') }}
+            {% for error in form.topic.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+          </div>
+          <div>
+            {{ form.message.label }}
+            {{ form.message(placeholder='Что сейчас съедает время команды?') }}
+            <p class="hint">Минимум 10 символов, максимум 1000</p>
+            {% for error in form.message.errors %}<p class="field-error">{{ error }}</p>{% endfor %}
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}
+            <p class="note is-on">{{ message }}</p>
+          {% endfor %}
+        {% endwith %}
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">Учебный одностраничник PEcf08. Ассистент работает в Telegram: <a href="{{ bot_url }}" target="_blank" rel="noopener">{{ bot_handle }}</a>. <a href="{{ url_for('admin_login') }}">Гримёрка</a></div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

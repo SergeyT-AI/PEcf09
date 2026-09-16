@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Гримёрка — заявки</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700&family=Manrope:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap admin-bar">
+      <a class="brand" href="{{ url_for('admin') }}">Гримёрка</a>
+      <nav>
+        <a href="{{ url_for('index') }}">На сайт</a>
+        <form method="post" action="{{ url_for('admin_logout') }}" style="display:inline">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button class="btn btn-ghost" type="submit">Выход</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap" style="padding: 36px 0 64px">
+    <h2>Заявки из формы</h2>
+    <div class="admin-stats">
+      <div><b>{{ total }}</b><span>всего</span></div>
+      <div><b>{{ unread }}</b><span>новых</span></div>
+      <div><b>{{ read }}</b><span>прочитанных</span></div>
+    </div>
+    {% if not leads %}
+      <p class="hint">Пока пусто. Отправьте форму на главной.</p>
+    {% else %}
+      <table class="leads">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Тема</th>
+            <th>Сообщение</th>
+            <th>Дата</th>
+            <th>Статус</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for lead in leads %}
+          <tr>
+            <td>{{ lead.id }}</td>
+            <td>{{ lead.name }}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.phone }}</td>
+            <td>{{ lead.topic }}</td>
+            <td>{{ lead.message }}</td>
+            <td>{{ lead.created_at }}</td>
+            <td>
+              {% if lead.is_read %}
+                <span class="badge badge-read">Прочитано</span>
+              {% else %}
+                <span class="badge badge-new">Новое</span>
+              {% endif %}
+            </td>
+            <td class="admin-actions">
+              {% if not lead.is_read %}
+              <form method="post" action="{{ url_for('mark_read', lead_id=lead.id) }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="btn btn-ghost" type="submit">Прочитано</button>
+              </form>
+              {% endif %}
+              <form method="post" action="{{ url_for('delete_lead', lead_id=lead.id) }}" onsubmit="return confirm('Удалить заявку?')">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="btn btn-blood" type="submit">Удалить</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[Unit]
+Description=PEcf09 Flask landing
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/pecf09
+EnvironmentFile=/opt/pecf09/.env
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONUTF8=1
+ExecStart=/opt/pecf09/venv/bin/gunicorn --bind 127.0.0.1:5050 --workers 1 app:app
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

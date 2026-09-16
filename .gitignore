@@ -1,0 +1,15 @@
+contacts.db
+.env
+.env.*
+!.env.example
+chroma_db/
+cache.json
+logs.db
+*.db
+logs_*.csv
+__pycache__/
+*.pyc
+.venv/
+venv/
+deploy/ssh_exec.py
+deploy/upload.py
