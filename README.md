@@ -36,7 +36,7 @@ cd homework/site/assistant
 python run_telegram.py
 ```
 
-Без `OPENAI_API_KEY` поиск идёт по файлам в `assistant/docs/`, логирование то же. С ключом эмбеддинги и ответы идут через ProxyAPI (`https://api.proxyapi.ru/openai/v1`), как в учебном telegram-bot. Переключение: `USE_PROXYAPI=true|false`.
+Без `OPENAI_API_KEY` поиск идёт по файлам урока в `assistant/docs/` (Python, векторные базы, RAG), логирование то же. С ключом эмбеддинги и ответы идут через ProxyAPI (`https://api.proxyapi.ru/openai/v1`), как в учебном telegram-bot. Переключение: `USE_PROXYAPI=true|false`.
 
 ## Что внутри
 
@@ -45,4 +45,4 @@ python run_telegram.py
 | `templates/`, `static/`, форма, админка | сайт PEcf08 |
 | `assistant/db_logger.py`, `cache.py`, `embeddings.py`, `rag.py`, `telegram_bot.py`, `main.py` | код урока PEcf09 |
 | `assistant/run_telegram.py`, `runtime.py` | запуск бота с тем же пайплайном логов |
-| `assistant/docs/` | база знаний: кейсы с лендинга + примеры из урока |
+| `assistant/docs/` | база знаний бота: Python, векторные базы, RAG и логи урока |

@@ -317,7 +317,17 @@ def get_sample_documents() -> List[Tuple[str, str]]:
     """
     # Пытаемся загрузить документы из папки
     documents = load_documents_from_folder(str(Path(__file__).resolve().parent / "docs"))
-    
+    lesson_stems = {
+        "python_основы",
+        "машинное_обучение_и_ai",
+        "векторные_базы_данных",
+        "как_работает_rag_ассистент",
+        "логи_метрики_и_sqlite",
+    }
+    documents = [(name, text) for name, text in documents if name in lesson_stems]
+    if documents:
+        print(f"В индекс бота берутся файлы урока: {', '.join(name for name, _ in documents)}")
+
     # Если документы не найдены, используем встроенные примеры
     if not documents:
         print("📝 Используются встроенные примеры документов")
