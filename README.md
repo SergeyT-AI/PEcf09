@@ -8,6 +8,7 @@
 
 - сайт: http://91.132.196.180/
 - бот: https://t.me/example_bases_bot
+- код: https://github.com/SergeyT-AI/PEcf09
 
 Файл `.env` в репозиторий не входит. Скопируйте `.env.example` и подставьте свои ключи.
 
